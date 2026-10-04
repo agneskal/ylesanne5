@@ -191,6 +191,7 @@ const perenimi = document.getElementById("perenimi");
 const kinnitus = document.getElementById("kinnitus");
 const telefon = document.getElementById("telefon");
 const aadress = document.getElementById("aadress");
+const epost = document.getElementById("epost");
 
 const errorMessage = document.getElementById("errorMessage");
 
@@ -204,6 +205,11 @@ form.addEventListener("submit", (e) => {
 
     if (perenimi.value.trim() === "") {
         errors.push("Sisesta perenimi");
+    }
+    
+    /*Sisestasin e-posti kontrolli*/
+    if (epost.value.trim() === "") {
+        errors.push("Sisesta E-post");
     }
 
     if (!kinnitus.checked) {
